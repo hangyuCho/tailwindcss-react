@@ -44,15 +44,15 @@ const Schedule: React.FC<Props> = ({ color = "bg-green-300", content }) => {
           <div className="flex justify-between">
             {/* group left */}
             <div className="flex gap-2 items-center">
-              <p>グループ</p>
+              <p className="text-2xl">グループ</p>
               <input
-                className="border border-gray-300 rounded-md"
+                className="border border-gray-300 rounded-md w-60"
                 type="text"
                 placeholder="(グループ表示)"
               />
             </div>
             {/* group center */}
-            <p>2019年8月19日(月)</p>
+            <p className="font-bold text-2xl">2019年8月19日(月)</p>
             {/* group right */}
             <div className="flex gap-2">
               <button
@@ -89,7 +89,49 @@ const Schedule: React.FC<Props> = ({ color = "bg-green-300", content }) => {
           </div>
         </div>
         {/* schedule center */}
-        <div></div>
+        <div className="table w-full">
+          {/* header */}
+          <div className="table-row w-full">
+            <div className="table-cell border border-gray-400 text-center w-2/12"></div>
+            <div className="table-cell border border-gray-400 text-center">
+              19 (月)
+            </div>
+            <div className="table-cell border border-gray-400 text-center">
+              20 (火)
+            </div>
+            <div className="table-cell border border-gray-400 text-center">
+              21 (水)
+            </div>
+            <div className="table-cell border border-gray-400 text-center">
+              22 (木)
+            </div>
+            <div className="table-cell border border-gray-400 text-center">
+              23 (金)
+            </div>
+            <div className="table-cell border border-gray-400 text-center">
+              24 (土)
+            </div>
+            <div className="table-cell border border-gray-400 text-center">
+              25 (日)
+            </div>
+          </div>
+          {/* body */}
+          <div className="table-row w-full">
+            <div className="table-cell border border-gray-400 w-2/12 p-2">
+              <p>高橋 健太</p>
+              <p>月予定</p>
+              <p>電話メモ履歴</p>
+              <p>担当確認</p>
+            </div>
+            <div className="table-cell border border-gray-400 p-2">(東京)</div>
+            <div className="table-cell border border-gray-400 p-2">(東京)</div>
+            <div className="table-cell border border-gray-400 p-2">(東京)</div>
+            <div className="table-cell border border-gray-400 p-2">(東京)</div>
+            <div className="table-cell border border-gray-400 p-2">(東京)</div>
+            <div className="table-cell border border-gray-400 p-2">(東京)</div>
+            <div className="table-cell border border-gray-400 p-2">(東京)</div>
+          </div>
+        </div>
         {/* schedule bottom */}
         <div></div>
       </div>
