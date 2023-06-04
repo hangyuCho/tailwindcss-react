@@ -1,5 +1,8 @@
 import MenuItem from "./parts/MenuItem.tsx";
 import Notice from "./parts/Notice.tsx";
+import CustomApp from "./parts/CustomApp.tsx";
+import LatestInfo from "./parts/LatestInfo.tsx";
+import Schedule from "./parts/Schedule.tsx";
 
 function Top() {
   return (
@@ -94,6 +97,17 @@ function Top() {
         </div>
       </div>
       <Notice content="8月の立替金申請は9月5日(木)までにお願いします" />
+      {/* main content */}
+      <div>
+        {/* Schedule */}
+        <Schedule />
+        {/* CustomApp */}
+        <div className="flex">
+          <CustomApp />
+          <LatestInfo />
+        </div>
+        {/* LatestInfo */}
+      </div>
     </div>
   );
 }

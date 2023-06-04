@@ -5,7 +5,7 @@ type Props = {
 const Notice: React.FC<Props> = ({ color = "bg-green-300", content }) => {
   return (
     <div className={[color, "p-2 flex gap-4 items-center m-3"].join(" ")}>
-      <div className="border-2 border-white rounded-full bg-green-300 px-2">
+      <div className="border-2 border-white rounded-full bg-green-300 px-2 text-xs">
         <p className="text-white">i</p>
       </div>
       {/* inline  */}
