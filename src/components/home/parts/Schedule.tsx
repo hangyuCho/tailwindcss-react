@@ -147,7 +147,7 @@ const Schedule: React.FC<Props> = ({ color = "bg-green-300", content }) => {
               <p className="text-sky-600 font-medium">電話メモ履歴</p>
               <p className="text-sky-600 font-medium">担当確認</p>
             </div>
-            <div className="table-cell border border-gray-400 p-2">
+            <div className="table-cell border border-gray-400 p-2 w-1/6">
               <p className="text-sky-600 font-bold">(東京)</p>
               <Task
                 badgeText="会議"
@@ -171,7 +171,7 @@ const Schedule: React.FC<Props> = ({ color = "bg-green-300", content }) => {
                 endTime="17:00"
               ></Task>
             </div>
-            <div className="table-cell border border-gray-400 p-2">
+            <div className="table-cell border border-gray-400 p-2 w-1/6">
               <p className="text-sky-600 font-bold">(東京)</p>
               <Task
                 badgeText="往訪"
@@ -188,7 +188,7 @@ const Schedule: React.FC<Props> = ({ color = "bg-green-300", content }) => {
                 endTime="14:00"
               ></Task>
             </div>
-            <div className="table-cell border border-gray-400 p-2">
+            <div className="table-cell border border-gray-400 p-2 w-1/6">
               <p className="text-sky-600 font-bold">(東京)</p>
               <Task
                 badgeText="会議"
@@ -205,7 +205,7 @@ const Schedule: React.FC<Props> = ({ color = "bg-green-300", content }) => {
                 endTime="12:00"
               ></Task>
             </div>
-            <div className="table-cell border border-gray-400 p-2">
+            <div className="table-cell border border-gray-400 p-2 w-1/6">
               <p className="text-sky-600 font-bold">(東京)</p>
               <Task
                 badgeText="来訪"
@@ -229,7 +229,7 @@ const Schedule: React.FC<Props> = ({ color = "bg-green-300", content }) => {
                 endTime="19:00"
               ></Task>
             </div>
-            <div className="table-cell border border-gray-400 p-2">
+            <div className="table-cell border border-gray-400 p-2 w-1/6">
               <p className="text-sky-600 font-bold">(東京)</p>
               <Task
                 badgeText="会議"
@@ -253,17 +253,17 @@ const Schedule: React.FC<Props> = ({ color = "bg-green-300", content }) => {
                 endTime="20:00"
               ></Task>
             </div>
-            <div className="table-cell border border-gray-400 p-2">
+            <div className="table-cell border border-gray-400 p-2 w-1/6">
               <p className="text-sky-600 font-bold">(東京)</p>
               <Task
                 badgeText="セミナー"
                 content="英会話"
                 color="yellow"
                 startTime="13:00"
-                endTime="15:00"
+                endTime="19:00"
               ></Task>
             </div>
-            <div className="table-cell border border-gray-400 p-2">
+            <div className="table-cell border border-gray-400 p-2 w-1/6">
               <p className="text-sky-600 font-bold">(東京)</p>
             </div>
           </div>

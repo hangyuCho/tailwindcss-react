@@ -1,10 +1,41 @@
-import MenuItem from "./parts/MenuItem.tsx";
-import Notice from "./parts/Notice.tsx";
-import CustomApp from "./parts/CustomApp.tsx";
-import LatestInfo from "./parts/LatestInfo.tsx";
-import Schedule from "./parts/Schedule.tsx";
+import { ReactNode } from "react"
+import MenuItem from "./parts/MenuItem"
+import Notice from "./parts/Notice"
+import CustomApp from "./parts/CustomApp"
+import LatestInfo from "./parts/LatestInfo"
+import Schedule from "./parts/Schedule"
 
-function Top() {
+interface Props {}
+
+interface PropsByCard {
+  children?: any[]
+}
+type ButtonProps = {
+  children?: ReactNode
+}
+const BasicButton: React.FC<ButtonProps> = ({ children }) => {
+  return (
+    <button
+      className="border border-gray-400 bg-gradient-to-t to-white from-gray-300 rounded-sm text-sm px-2 text-sky-700 font-extrabold"
+      type="button"
+    >
+      {children}
+    </button>
+  )
+}
+const Card: React.FC<PropsByCard> = ({ children = [] }) => {
+  const title = children.find((item) => item.key === "title")
+  const body = children.find((item) => item.key === "body")
+  return (
+    <div className="w-full border">
+      {/* top line */}
+      <div className="w-full px-2 py-2 bg-blue-200 flex border-sky-500 border-t-4">{title}</div>
+      {children}
+    </div>
+  )
+}
+
+const Top: React.FC<Props> = () => {
   return (
     /* top */
     <div>
@@ -34,28 +65,16 @@ function Top() {
           <div className="h-full bg-gray-800">
             {/* right button group */}
             <div className="h-full flex">
-              <button
-                className="h-full px-2 border-l border-gray-600"
-                type="button"
-              >
+              <button className="h-full px-2 border-l border-gray-600" type="button">
                 🔔
               </button>
-              <button
-                className="h-full px-2 border-l border-gray-600"
-                type="button"
-              >
+              <button className="h-full px-2 border-l border-gray-600" type="button">
                 アプリ一覧
               </button>
-              <button
-                className="h-full px-2 border-l border-gray-600"
-                type="button"
-              >
+              <button className="h-full px-2 border-l border-gray-600" type="button">
                 リンク
               </button>
-              <button
-                className="h-full px-2 border-l border-gray-600 flex items-center"
-                type="button"
-              >
+              <button className="h-full px-2 border-l border-gray-600 flex items-center" type="button">
                 {/* login user */}
                 <div className="flex flex-row items-center gap-2">
                   <div className="p-2 bg-white"></div>
@@ -90,9 +109,7 @@ function Top() {
           </div>
           {/* bottom line */}
           <div className="bg-blue-300 flex justify-center">
-            <div className="text-xs bg-blue-500 px-14 rounded-sm text-white">
-              ▲
-            </div>
+            <div className="text-xs bg-blue-500 px-14 rounded-sm text-white">▲</div>
           </div>
         </div>
       </div>
@@ -108,8 +125,20 @@ function Top() {
         </div>
         {/* LatestInfo */}
       </div>
+      <div className="bg-sky-50 border-sky-200"></div>
+      <div className="bg-red-50 border-red-200"></div>
+      <div className="bg-green-50 border-green-200"></div>
+      <div className="bg-blue-50 border-blue-200"></div>
+      <div className="bg-indigo-50 border-indigo-200"></div>
+      <div className="bg-yellow-50 border-yellow-200"></div>
+      <div className="bg-sky-400"></div>
+      <div className="bg-red-400"></div>
+      <div className="bg-green-400"></div>
+      <div className="bg-blue-400"></div>
+      <div className="bg-indigo-400"></div>
+      <div className="bg-yellow-400"></div>
     </div>
-  );
+  )
 }
 
-export default Top;
+export default Top
