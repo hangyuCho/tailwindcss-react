@@ -29,8 +29,14 @@ const Card: React.FC<PropsByCard> = ({ children = [] }) => {
   return (
     <div className="w-full border">
       {/* top line */}
-      <div className="w-full px-2 py-2 bg-blue-200 flex border-sky-500 border-t-4">{title}</div>
-      {children}
+      <div className="w-full px-2 py-2 bg-blue-200 flex border-sky-500 border-t-4 justify-between">
+        {title}
+        {/* fold button*/}
+        <div>
+          <BasicButton>▼</BasicButton>
+        </div>
+      </div>
+      {body}
     </div>
   )
 }
@@ -117,11 +123,62 @@ const Top: React.FC<Props> = () => {
       {/* main content */}
       <div>
         {/* Schedule */}
-        <Schedule />
+        <Card>
+          <div key="title">
+            <div className="flex justify-between gap-2">
+              {/* label area */}
+              <div className="flex gap-2">
+                <div className="w-2 p-3 bg-gray-500"></div>
+                <p className="font-extrabold text-xl text-sky-700">スケジュール</p>
+              </div>
+              {/* search */}
+              <div className="flex gap-2">
+                <div className="w-2 p-3 bg-gray-500"></div>
+                <input type="input" />
+                <BasicButton>ユーザー/施設検索</BasicButton>
+              </div>
+            </div>
+          </div>
+          <div key="body">
+            <Schedule />
+          </div>
+        </Card>
         {/* CustomApp */}
-        <div className="flex">
-          <CustomApp />
-          <LatestInfo />
+        <div className="flex gap-4">
+          <Card>
+            <div key="title">
+              <div className="flex justify-between gap-2">
+                {/* label area */}
+                <div className="flex gap-2">
+                  <div className="w-2 p-3 bg-gray-500"></div>
+                  <p className="font-extrabold text-xl text-sky-700 flex items-center">
+                    カスタムアプリ <span className="text-gray-500 text-lg"> - 売上情報</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div key="body">
+              <CustomApp />
+            </div>
+          </Card>
+          <Card>
+            <div key="title">
+              <div className="flex justify-between gap-2">
+                {/* label area */}
+                <div className="flex gap-2">
+                  <div className="w-2 p-3 bg-gray-500"></div>
+                  <p className="font-extrabold text-xl text-sky-700">高橋健太さんの最近情報</p>
+                </div>
+                {/* search */}
+                <div className="flex gap-2">
+                  <BasicButton>↪️</BasicButton>
+                </div>
+              </div>
+            </div>
+            <div key="body">
+              <LatestInfo />
+            </div>
+          </Card>
         </div>
         {/* LatestInfo */}
       </div>
